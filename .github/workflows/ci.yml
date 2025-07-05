@@ -28,10 +28,6 @@ jobs:
           python -m pip install -r requirements.txt
         working-directory: ./backend
 
-      - name: Verify Pytest Installation
-        run: python -m pip show pytest # Adicione esta etapa para depuração
-        working-directory: ./backend
-
       - name: Run Backend Tests
         run: python -m pytest tests/
         working-directory: ./backend

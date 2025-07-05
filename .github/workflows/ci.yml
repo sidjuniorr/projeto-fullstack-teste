@@ -36,6 +36,8 @@ jobs:
       - name: Run Backend Tests
         run: python -m pytest tests/
         working-directory: ./backend
+        env:
+            PYTHONPATH: ${{ github.workspace }}/backend
 
       - name: Set up Node.js for Frontend
         uses: actions/setup-node@v4
